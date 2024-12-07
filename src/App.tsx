@@ -1,11 +1,8 @@
-import EnquireForm from "./components/forms/Enquire";
-
 function App() {
   return (
     <>
-      <div className="font-bold text-2xl w-screen h-screen flex justify-center items-center">
-        <EnquireForm />
-        <h1></h1>
+      <div className="font-custom w-screen h-screen flex justify-start items-start m-4">
+        <h1>Brickbybrick.</h1>
       </div>
     </>
   );
