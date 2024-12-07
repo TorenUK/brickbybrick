@@ -18,21 +18,31 @@ const EnquireForm = () => {
   console.log(watch("example")); // watch input value by passing the name of it.
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex flex-col gap-2">
+    <form
+      className="grid-white gap-2 grid-cols-artifact"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="grid-white">
         <input
-          className="bg-white text-black"
+          className="ml-1 mr-1 mt-1 col-span-full bg-white text-black"
           defaultValue="test"
-          {...register("example")}
+          {...register("example", { required: true })}
         />
+        {errors.example && (
+          <span className="text-red-500 text-sm">This field is required</span>
+        )}
         <input
-          className="bg-white text-black"
+          defaultValue={"example"}
+          className="bg-white text-black col-span-full m-1"
           {...register("exampleRequired", { required: true })}
         />
         {errors.exampleRequired && (
           <span className="text-red-500 text-sm">This field is required</span>
         )}
-        <input type="submit" />
+        <input
+          className="m-1 col-span-full hover:bg-black hover:cursor-pointer"
+          type="submit"
+        />
       </div>
     </form>
   );

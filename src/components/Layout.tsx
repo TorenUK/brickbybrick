@@ -6,9 +6,12 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="grid grid-white grid-rows-[auto,1fr,auto] grid-cols-artifact md:grid-cols-12 min-h-screen">
+    <div
+      className="grid grid-white grid-rows-[auto,1fr,auto] grid-cols-artifact md:grid-cols-12 
+      min-h-screen max-w-screen max-h-screen overflow-hidden"
+    >
       {/* Main Content */}
-      <main className="row-start-2 col-span-full md:col-span-10 md:col-start-2 p-4">
+      <main className="grid-white row-start-2 col-span-full md:col-span-10 md:col-start-2 p-4">
         {children}
       </main>
       {/* Footer */}
