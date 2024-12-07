@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.grid-white {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  border: 1px solid white; /* Adjust thickness and color as needed */
+}
 
 :root {
   font-family: Departure, system-ui, Avenir, Helvetica, Arial, sans-serif;

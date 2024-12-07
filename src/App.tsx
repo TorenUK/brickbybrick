@@ -1,9 +1,12 @@
-import Title from "./components/Title";
+import Hero from "./components/Hero";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <>
-      <Title />
+      <Layout>
+        <Hero />
+      </Layout>
     </>
   );
 }

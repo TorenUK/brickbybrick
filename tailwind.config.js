@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         custom: ["Departure"],
       },
+      gridTemplateColumns: {
+        artifact: "repeat(auto-fit, minmax(200px, 1fr))",
+      },
     },
   },
   plugins: [],
