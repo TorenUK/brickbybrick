@@ -1,12 +1,9 @@
-import Hero from "./components/Hero";
-import Layout from "./components/Layout";
+import CustomGrid from "./components/CustomGrid";
 
 function App() {
   return (
     <>
-      <Layout>
-        <Hero />
-      </Layout>
+      <CustomGrid />
     </>
   );
 }
