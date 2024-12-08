@@ -95,9 +95,9 @@ const CustomGrid = () => {
       <div className="col-span-3 sm:col-span-2">
         <Hero />
       </div>
-      {/* <div className="card-wrapper hidden md:block ">
+      <div className="card-wrapper hidden lg:block ">
         <div className="card-content">4</div>
-      </div> */}
+      </div>
       <div className="card-wrapper col-start-4 hidden md:block">
         <div className="card-content">5</div>
       </div>
