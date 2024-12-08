@@ -1,13 +1,100 @@
+import React from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
+
+type GridCard = {
+  name: string;
+  colSpan: {
+    default: number;
+    sm?: number;
+    md?: number;
+  };
+  rowSpan?: number;
+  element?: React.JSX.Element;
+};
+
+const gridCards: GridCard[] = [
+  {
+    name: "hero",
+    colSpan: {
+      default: 3,
+    },
+    element: <Hero />,
+  },
+  {
+    name: "content",
+    colSpan: {
+      default: 1,
+    },
+  },
+  {
+    name: "content",
+    colSpan: {
+      default: 1,
+    },
+  },
+  {
+    name: "content",
+    colSpan: {
+      default: 1,
+    },
+  },
+  {
+    name: "who we are",
+    colSpan: {
+      default: 2,
+    },
+  },
+  {
+    name: "content",
+    colSpan: {
+      default: 1,
+    },
+  },
+  {
+    name: "what we do",
+    colSpan: {
+      default: 2,
+    },
+  },
+  {
+    name: "content",
+    colSpan: {
+      default: 1,
+    },
+  },
+  {
+    name: "animated content",
+    colSpan: {
+      default: 3,
+    },
+    rowSpan: 3,
+  },
+];
+
+const renderGrid = () => {
+  return (
+    <div className="relative h-screen w-screen grid grid-cols-5 grid-rows-7 gap-2 pt-4 pl-4 pr-4">
+      {gridCards.map((gridCard, idx) => (
+        <div
+          className={`card-wrapper col-span-${
+            gridCard.colSpan.default
+          } row-span-${gridCard.rowSpan ?? 1}`}
+        >
+          <div className="card-content">{gridCard.element}</div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const CustomGrid = () => {
   return (
     <div className="relative h-screen w-screen grid grid-cols-5 grid-rows-7 gap-2 pt-4 pl-4 pr-4">
-      <div className="col-span-2">
+      <div className="col-span-3 sm:col-span-2">
         <Hero />
       </div>
-      <div className="card-wrapper col-start-3">
+      <div className="card-wrapper">
         <div className="card-content">4</div>
       </div>
       <div className="card-wrapper col-start-4">
@@ -18,12 +105,12 @@ const CustomGrid = () => {
       </div>
       <div className="card-wrapper col-span-2 row-start-2">
         <div className="card-content flex items-center justify-center">
-          WHO WE ARE
+          who we are.
         </div>
       </div>
       <div className="card-wrapper col-span-2 col-start-4 row-start-2">
         <div className="card-content flex items-center justify-center">
-          WHAT WE DO
+          what we do.
         </div>
       </div>
       <div className="card-wrapper col-start-3 row-start-2">
@@ -31,7 +118,7 @@ const CustomGrid = () => {
       </div>
       <div className="card-wrapper col-span-3 row-span-3 col-start-2 row-start-3">
         <div className="card-content flex items-center justify-center">
-          ANIMATED CONTENT
+          animated content.
         </div>
       </div>
       <div className="card-wrapper col-start-1 row-start-3">
@@ -52,9 +139,19 @@ const CustomGrid = () => {
       <div className="card-wrapper col-start-5 row-start-5">
         <div className="card-content">19</div>
       </div>
-      <div className="card-wrapper col-start-1 row-start-6 col-span-5 ">
+      <div className="card-wrapper col-start-1 row-start-6 col-span-2 ">
         <div className="card-content flex items-center justify-center">
-          TECHNOLOGIES
+          technologies.
+        </div>
+      </div>
+      <div className="card-wrapper col-start-3 row-start-6 col-span-1 ">
+        <div className="card-content flex items-center justify-center">
+          technologies.
+        </div>
+      </div>
+      <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
+        <div className="card-content flex items-center justify-center">
+          technologies.
         </div>
       </div>
       <div className="card-wrapper col-start-1 row-start-7 col-span-5 ">
@@ -64,6 +161,7 @@ const CustomGrid = () => {
       </div>
     </div>
   );
+  // return renderGrid();
 };
 
 export default CustomGrid;
