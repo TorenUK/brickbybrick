@@ -72,11 +72,12 @@ const gridCards: GridCard[] = [
   },
 ];
 
-const renderGrid = () => {
+export const renderGrid = () => {
   return (
     <div className="relative h-screen w-screen grid grid-cols-5 grid-rows-7 gap-2 pt-4 pl-4 pr-4">
       {gridCards.map((gridCard, idx) => (
         <div
+          key={idx}
           className={`card-wrapper col-span-${
             gridCard.colSpan.default
           } row-span-${gridCard.rowSpan ?? 1}`}
