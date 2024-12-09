@@ -1,9 +1,9 @@
-import CustomGrid from "./components/CustomGrid";
+import { GridLayoutMobile, GridlayoutDesktop } from "./components/GridLayout";
 
 function App() {
   return (
     <>
-      <CustomGrid />
+      <GridlayoutDesktop />
     </>
   );
 }
