@@ -183,7 +183,7 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-span-2">
-        <div className="card-content ">3</div>
+        <div className="card-content">3</div>
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
@@ -206,16 +206,17 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-2">
-        <div className="card-content">8</div>
-      </div>
-      <div className="card-wrapper col-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
           projects.
         </div>
       </div>
+      <div className="card-wrapper col-start-3 col-span-1">
+        <div className="card-content flex items-center justify-center">
+          get a quote.
+        </div>
+      </div>
       <div className="card-wrapper col-start-1 col-span-3">
         <div className="card-content grid items-end">
-          10
           <Footer />
         </div>
       </div>
