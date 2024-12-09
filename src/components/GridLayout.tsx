@@ -196,7 +196,9 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-2">
-        <div className="card-content ">5</div>
+        <div className="card-content flex items-center justify-center">
+          embed animated content.
+        </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1">
         <div className="card-content flex items-center justify-center">
