@@ -98,61 +98,67 @@ const GridlayoutDesktop = () => {
       <div className="card-wrapper hidden lg:block ">
         <div className="card-content">4</div>
       </div>
-      <div className="card-wrapper col-start-4 hidden md:block">
-        <div className="card-content">5</div>
+      <div className="card-wrapper col-start-4">
+        <div className="card-content flex items-center justify-center text-center flex-wrap">
+          creative engineering.
+        </div>
       </div>
-      <div className="card-wrapper hidden md:block">
-        <div className="card-content">6</div>
+      <div className="card-wrapper">
+        <div className="card-content flex items-center justify-center">
+          social.
+        </div>
       </div>
       <div className="card-wrapper col-span-3 md:col-span-2 row-start-2">
-        <div className="card-content flex items-center justify-center text-md">
+        <div className="card-content flex items-center justify-center">
           who we are.
         </div>
       </div>
-      <div className="card-wrapper hidden md:flex col-span-2 col-start-4 row-start-2">
-        <div className="card-content flex items-center justify-center text-md">
+      <div className="card-wrapper md:flex col-span-2 col-start-4 row-start-2">
+        <div className="card-content flex items-center justify-center">
           what we do.
         </div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-3 row-start-2">
-        <div className="card-content">12</div>
+      <div className="card-wrapper col-start-3 row-start-2">
+        <div className="card-content flex items-center justify-center">
+          projects.
+        </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
-        <div className="card-content flex items-center justify-center text-md">
-          animated content.
+        <div className="card-content flex items-center justify-center">
+          embed animated content.
         </div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-1 row-start-3">
+      <div className="card-wrapper col-start-1 row-start-3">
         <div className="card-content">14</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-1 row-start-4">
+      <div className="card-wrapper col-start-1 row-start-4">
         <div className="card-content">15</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-1 row-start-5">
+      <div className="card-wrapper col-start-1 row-start-5">
         <div className="card-content">16</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-5 row-start-3">
+      <div className="card-wrapper col-start-5 row-start-3">
         <div className="card-content">17</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-5 row-start-4">
+      <div className="card-wrapper col-start-5 row-start-4">
         <div className="card-content">18</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-5 row-start-5">
+      <div className="card-wrapper col-start-5 row-start-5">
         <div className="card-content">19</div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-1 row-start-6 col-span-2 ">
-        <div className="card-content flex items-center justify-center text-md">
+      <div className="card-wrapper col-start-1 row-start-6 col-span-2 ">
+        <div className="card-content flex items-center justify-center">
           technologies.
         </div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-3 row-start-6 col-span-1 ">
-        <div className="card-content flex items-center justify-center text-md">
-          technologies.
+      <div className="card-wrapper col-start-3 row-start-6 col-span-1 ">
+        <div className="card-content flex items-center justify-center">
+          get a quote.
         </div>
       </div>
-      <div className="card-wrapper hidden md:block col-start-4 row-start-6 col-span-2 ">
-        <div className="card-content flex items-center justify-center text-md">
-          technologies.
+      <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
+        <div className="card-content flex items-center justify-center">
+          cms.
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 md:row-start-7 md:col-span-5 ">
@@ -167,34 +173,48 @@ const GridlayoutDesktop = () => {
 
 const GridLayoutMobile = () => {
   return (
-    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4 text-sm">
-      <div className="col-span-3">
+    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4">
+      <div className="col-span-2">
         <Hero />
       </div>
+      <div className="card-wrapper col-span-1">
+        <div className="card-content flex items-center justify-center">
+          social.
+        </div>
+      </div>
       <div className="card-wrapper col-span-2">
-        <div className="card-content ">2</div>
+        <div className="card-content ">3</div>
       </div>
       <div className="card-wrapper col-span-1">
-        <div className="card-content">3</div>
+        <div className="card-content flex items-center justify-center flex-wrap text-center">
+          creative engineering.
+        </div>
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
-        <div className="card-content">4</div>
+        <div className="card-content flex items-center justify-center">
+          who we are.
+        </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-2">
-        <div className="card-content">5</div>
+        <div className="card-content ">5</div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1">
-        <div className="card-content">6</div>
+        <div className="card-content flex items-center justify-center">
+          what we do.
+        </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-2">
-        <div className="card-content">7</div>
+        <div className="card-content">8</div>
       </div>
       <div className="card-wrapper col-start-3 col-span-1">
-        <div className="card-content">8</div>
+        <div className="card-content flex items-center justify-center">
+          projects.
+        </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3">
         <div className="card-content grid items-end">
-          9<Footer />
+          10
+          <Footer />
         </div>
       </div>
     </div>
