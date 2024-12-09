@@ -167,7 +167,7 @@ const GridlayoutDesktop = () => {
 
 const GridLayoutMobile = () => {
   return (
-    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4">
+    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4 text-sm">
       <div className="col-span-3">
         <Hero />
       </div>
