@@ -102,7 +102,7 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper hidden lg:block ">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <div>{secondsRemaining}.</div>
+          {secondsRemaining}.
         </div>
       </div>
       <div className="card-wrapper col-start-4">
@@ -192,7 +192,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <div>{secondsRemaining}.</div>
+          {secondsRemaining}.
         </div>
       </div>
       <div className="card-wrapper col-span-1">
