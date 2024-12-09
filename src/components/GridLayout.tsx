@@ -91,7 +91,7 @@ export const renderGrid = () => {
 
 const GridlayoutDesktop = () => {
   return (
-    <div className="relative h-screen w-screen max-w-[1440px] grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
+    <div className="relative h-screen w-screen max-w-[1440px] md:grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
       <div className="col-span-3 sm:col-span-2">
         <Hero />
       </div>
@@ -167,7 +167,37 @@ const GridlayoutDesktop = () => {
 
 const GridLayoutMobile = () => {
   return (
-    <div className="md:hidden relative h-screen w-screen max-w-[1440px] grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4"></div>
+    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4">
+      <div className="col-span-3">
+        <Hero />
+      </div>
+      <div className="card-wrapper col-span-2">
+        <div className="card-content ">2</div>
+      </div>
+      <div className="card-wrapper col-span-1">
+        <div className="card-content">3</div>
+      </div>
+      <div className="card-wrapper row-start-3 col-span-1">
+        <div className="card-content">4</div>
+      </div>
+      <div className="card-wrapper col-start-2 col-span-2 row-span-2">
+        <div className="card-content">5</div>
+      </div>
+      <div className="card-wrapper col-start-1 col-span-1">
+        <div className="card-content">6</div>
+      </div>
+      <div className="card-wrapper col-start-1 col-span-2">
+        <div className="card-content">7</div>
+      </div>
+      <div className="card-wrapper col-start-3 col-span-1">
+        <div className="card-content">8</div>
+      </div>
+      <div className="card-wrapper col-start-1 col-span-3">
+        <div className="card-content grid items-end">
+          9<Footer />
+        </div>
+      </div>
+    </div>
   );
   // return renderGrid();
 };
