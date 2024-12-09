@@ -91,7 +91,7 @@ export const renderGrid = () => {
 
 const CustomGrid = () => {
   return (
-    <div className="relative h-screen w-screen grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
+    <div className="relative h-screen w-screen max-w-[1440px] grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
       <div className="col-span-3 sm:col-span-2">
         <Hero />
       </div>

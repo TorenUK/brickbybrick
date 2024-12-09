@@ -7,7 +7,7 @@
 @layer utilities {
   .card-wrapper {
     @apply relative border-[1px] border-[#ffffff2c] rounded-md
-    overflow-hidden
+    overflow-hidden;
   }
 
   .card-wrapper::before {
@@ -21,15 +21,8 @@
   }
 
   .card-content {
-    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-[#242424] rounded-md
+    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-[#242424] rounded-md;
   }
-}
-
-.grid-white {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  border: 1px solid white; /* Adjust thickness and color as needed */
 }
 
 :root {
@@ -59,9 +52,11 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
