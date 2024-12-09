@@ -1,26 +1,26 @@
 import { useState, useEffect } from "react";
 
 const useTimer = (targetDate: Date) => {
-  const calculateSecondsLeft = () => {
+  const calculateMinutesLeft = () => {
     const now = new Date();
     const difference = Math.floor(
-      (targetDate.getTime() - now.getTime()) / 1000
-    ); // Difference in seconds
+      (targetDate.getTime() - now.getTime()) / (1000 * 60) // Difference in minutes
+    );
 
     return difference > 0 ? difference : 0; // Return 0 if the target date is passed
   };
 
-  const [secondsLeft, setSecondsLeft] = useState(calculateSecondsLeft);
+  const [minutesLeft, setMinutesLeft] = useState(calculateMinutesLeft);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setSecondsLeft(calculateSecondsLeft());
-    }, 1000);
+      setMinutesLeft(calculateMinutesLeft());
+    }, 1000); // Still updates every second for precision
 
     return () => clearInterval(timer); // Clean up interval on unmount
   }, [targetDate]);
 
-  return secondsLeft; // Return only seconds
+  return minutesLeft; // Return only minutes
 };
 
 export { useTimer };

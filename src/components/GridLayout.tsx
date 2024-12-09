@@ -93,7 +93,7 @@ export const renderGrid = () => {
 const TARGET_DATE = new Date(new Date().getFullYear() + 1, 0, 7);
 
 const GridlayoutDesktop = () => {
-  const secondsRemaining = useTimer(TARGET_DATE);
+  const minutesRemaining = useTimer(TARGET_DATE);
 
   return (
     <div className="relative h-screen w-screen max-w-[1440px] md:grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
@@ -102,7 +102,7 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper hidden lg:block ">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          {secondsRemaining}.
+          {minutesRemaining}.
         </div>
       </div>
       <div className="card-wrapper col-start-4">
@@ -179,7 +179,7 @@ const GridlayoutDesktop = () => {
 };
 
 const GridLayoutMobile = () => {
-  const secondsRemaining = useTimer(TARGET_DATE);
+  const minutesRemaining = useTimer(TARGET_DATE);
   return (
     <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4">
       <div className="col-span-2">
@@ -192,7 +192,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          {secondsRemaining}.
+          {minutesRemaining}.
         </div>
       </div>
       <div className="card-wrapper col-span-1">
