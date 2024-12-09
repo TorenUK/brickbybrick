@@ -1,39 +1,26 @@
 import { useState, useEffect } from "react";
 
 const useTimer = (targetDate: Date) => {
-  const calculateTimeLeft = () => {
+  const calculateSecondsLeft = () => {
     const now = new Date();
-    const difference = targetDate.getTime() - now.getTime();
+    const difference = Math.floor(
+      (targetDate.getTime() - now.getTime()) / 1000
+    ); // Difference in seconds
 
-    if (difference <= 0) {
-      return {
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        isComplete: true,
-      };
-    }
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / (1000 * 60)) % 60);
-    const seconds = Math.floor((difference / 1000) % 60);
-
-    return { days, hours, minutes, seconds, isComplete: false };
+    return difference > 0 ? difference : 0; // Return 0 if the target date is passed
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+  const [secondsLeft, setSecondsLeft] = useState(calculateSecondsLeft);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setSecondsLeft(calculateSecondsLeft());
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(timer); // Clean up interval on unmount
   }, [targetDate]);
 
-  return timeLeft;
+  return secondsLeft; // Return only seconds
 };
 
 export { useTimer };

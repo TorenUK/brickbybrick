@@ -93,7 +93,7 @@ export const renderGrid = () => {
 const TARGET_DATE = new Date(new Date().getFullYear() + 1, 0, 7);
 
 const GridlayoutDesktop = () => {
-  const { days, hours, minutes, seconds } = useTimer(TARGET_DATE);
+  const secondsRemaining = useTimer(TARGET_DATE);
 
   return (
     <div className="relative h-screen w-screen max-w-[1440px] md:grid grid-cols-2 grid-rows-5 md:grid-cols-5 md:grid-rows-7 gap-2 pt-4 pl-4 pr-4">
@@ -101,10 +101,8 @@ const GridlayoutDesktop = () => {
         <Hero />
       </div>
       <div className="card-wrapper hidden lg:block ">
-        <div className="card-content flex flex-col items-center justify-center flex-wrap text-center">
-          <div>{days} days</div> <div>{hours} hours</div>
-          <div>{minutes} minutes</div>
-          <div>{seconds} seconds</div>
+        <div className="card-content flex items-center justify-center flex-wrap text-center">
+          <div>{secondsRemaining}</div>
         </div>
       </div>
       <div className="card-wrapper col-start-4">
@@ -181,7 +179,7 @@ const GridlayoutDesktop = () => {
 };
 
 const GridLayoutMobile = () => {
-  const { days, hours, minutes, seconds } = useTimer(TARGET_DATE);
+  const secondsRemaining = useTimer(TARGET_DATE);
   return (
     <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-4">
       <div className="col-span-2">
@@ -193,10 +191,8 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-span-2">
-        <div className="card-content flex flex-col items-center justify-center flex-wrap text-center">
-          <div>{days} days</div> <div>{hours} hours</div>
-          <div>{minutes} minutes</div>
-          <div>{seconds} seconds</div>
+        <div className="card-content flex items-center justify-center flex-wrap text-center">
+          <div>{secondsRemaining}</div>
         </div>
       </div>
       <div className="card-wrapper col-span-1">
