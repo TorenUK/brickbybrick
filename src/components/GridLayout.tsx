@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import { useTimer } from "../hooks/useTimer";
+
+//todo
+// create 'get quote' form using react hook form
+// Required Fields:
+// first name, last name, email, phone, [project outline]
 
 type GridCard = {
   name: string;
@@ -13,7 +18,10 @@ type GridCard = {
   rowSpan?: number;
   element?: React.JSX.Element;
 };
-
+// todo: populate with array of tile objects
+// object shape:
+// abstract styles to main style sheet
+// title, styles (col-span, row-span, col-start, row-start, display), content (Form? Animation?, text?),
 const gridCards: GridCard[] = [
   {
     name: "hero",
@@ -74,14 +82,27 @@ const gridCards: GridCard[] = [
 ];
 
 export const renderGrid = () => {
+  // piece of state to track which tile has been clicked
+  // temp
+  const [activeTile, setActiveTile] = useState<null | number>(null);
+  // temp
+  const handleClick = (index: number) => {
+    setActiveTile(activeTile === index ? null : index);
+  };
+
+  // temp
   return (
     <div className="relative h-screen w-screen grid grid-cols-5 grid-rows-7 gap-2 pt-4 pl-4 pr-4">
-      {gridCards.map((gridCard, idx) => (
+      {gridCards.map((gridCard, index) => (
         <div
-          key={idx}
+          key={index}
+          onClick={() => handleClick(index)}
           className={`card-wrapper col-span-${
             gridCard.colSpan.default
-          } row-span-${gridCard.rowSpan ?? 1}`}
+          } row-span-${gridCard.rowSpan ?? 1} ${
+            // dynamically set styles depending on which tile has been clicked
+            activeTile === index ? "m-4" : ""
+          }`}
         >
           <div className="card-content">{gridCard.element}</div>
         </div>
