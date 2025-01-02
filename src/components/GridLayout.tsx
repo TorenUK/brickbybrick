@@ -112,7 +112,7 @@ export const renderGrid = () => {
   );
 };
 
-const TARGET_DATE = new Date(new Date().getFullYear() + 1, 0, 7);
+const TARGET_DATE = new Date(new Date().getFullYear(), 1, 7);
 
 const GridlayoutDesktop = () => {
   const minutesRemaining = useTimer(TARGET_DATE);
@@ -124,39 +124,43 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper hidden lg:block ">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          {minutesRemaining}.
+          <span className="text-pink-500 bg-black p-1 rounded">
+            {minutesRemaining}
+          </span>
         </div>
       </div>
       <div className="card-wrapper col-start-4">
         <div className="card-content flex items-center justify-center text-center flex-wrap p-2">
-          creative engineering.
+          creative engineering
         </div>
       </div>
       <div className="card-wrapper">
         <div className="card-content flex items-center justify-center">
-          social.
+          social
         </div>
       </div>
       <div className="card-wrapper col-span-3 md:col-span-2 row-start-2">
         <div className="card-content flex items-center justify-center">
-          who we are.
+          who we are
         </div>
       </div>
       <div className="card-wrapper md:flex col-span-2 col-start-4 row-start-2">
         <div className="card-content flex items-center justify-center">
-          what we do.
+          what we do
         </div>
       </div>
       <div className="card-wrapper col-start-3 row-start-2">
         <div className="card-content flex items-center justify-center">
-          projects.
+          projects
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
           <span>nought</span>
-          <span className="m-1 text-sm text-green-500">1.0.0-beta</span>
+          <span className="m-1 text-sm text-green-500 bg-black p-1 rounded">
+            1.0.0-beta
+          </span>
         </div>
       </div>
       <div className="card-wrapper col-start-1 row-start-3">
@@ -179,18 +183,16 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper col-start-1 row-start-6 col-span-2 ">
         <div className="card-content flex items-center justify-center">
-          technologies.
+          technologies
         </div>
       </div>
       <div className="card-wrapper col-start-3 row-start-6 col-span-1 ">
         <div className="card-content flex items-center justify-center">
-          get a quote.
+          get a quote
         </div>
       </div>
       <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
-        <div className="card-content flex items-center justify-center">
-          cms.
-        </div>
+        <div className="card-content flex items-center justify-center">cms</div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 md:row-start-7 md:col-span-5 ">
         <div className="card-content flex flex-col justify-end">
@@ -211,44 +213,48 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center">
-          social.
+          social
         </div>
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          {minutesRemaining}.
+          <span className="text-pink-500 bg-black p-1 rounded">
+            {minutesRemaining}
+          </span>
         </div>
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          creative engineering.
+          creative engineering
         </div>
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          who we are.
+          who we are
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-2">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
           <span>nought</span>
-          <span className="m-1 text-xs text-green-500">1.0.0-beta</span>
+          <span className="m-1 text-xs text-green-500 bg-black p-1 rounded">
+            1.0.0-beta
+          </span>
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1">
         <div className="card-content flex items-center justify-center">
-          what we do.
+          what we do
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-2">
         <div className="card-content flex items-center justify-center">
-          projects.
+          projects
         </div>
       </div>
       <div className="card-wrapper col-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          get a quote.
+          get a quote
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3">
