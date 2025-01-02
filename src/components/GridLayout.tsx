@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import Phone from "./animation/phone";
 import { useTimer } from "../hooks/useTimer";
+import { DragCloseModal } from "./Modal";
 
 //todo
 // create 'get quote' form using react hook form
@@ -187,8 +188,8 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-3 row-start-6 col-span-1 ">
-        <div className="card-content flex items-center justify-center">
-          get a quote
+        <div className="card-content flex items-center justify-center cursor-pointer">
+          <DragCloseModal title="get a quote" />
         </div>
       </div>
       <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
@@ -257,7 +258,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          get a quote
+          <DragCloseModal title="get a quote" />
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3">
