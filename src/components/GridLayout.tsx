@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
+import Phone from "./animation/phone";
 import { useTimer } from "../hooks/useTimer";
 
 //todo
@@ -152,8 +153,10 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
-        <div className="card-content flex items-center justify-center">
-          embed animated content.
+        <div className="card-content flex flex-col items-center justify-center">
+          <Phone />
+          <span>nought</span>
+          <span className="m-1 text-sm text-green-500">1.0.0-beta</span>
         </div>
       </div>
       <div className="card-wrapper col-start-1 row-start-3">
@@ -227,8 +230,10 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-2">
-        <div className="card-content flex items-center justify-center">
-          embed animated content.
+        <div className="card-content flex flex-col items-center justify-center">
+          <Phone />
+          <span>nought</span>
+          <span className="m-1 text-xs text-green-500">1.0.0-beta</span>
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1">
