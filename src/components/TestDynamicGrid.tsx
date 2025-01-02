@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-import { useTimer } from "../hooks/useTimer";
+// import { useTimer } from "../hooks/useTimer";
 
 //todo
 // create 'get quote' form using react hook form
@@ -273,7 +273,7 @@ const gridBricks: GridBrick[] = [
 //   );
 // };
 
-const TARGET_DATE = new Date(new Date().getFullYear() + 1, 0, 7);
+// const TARGET_DATE = new Date(new Date().getFullYear() + 1, 0, 7);
 
 const GridLayout = ({ isMobile = false }) => {
   const [activeBrick, setActiveBrick] = useState<null | number>(null);
@@ -285,7 +285,7 @@ const GridLayout = ({ isMobile = false }) => {
     ? "grid grid-cols-3 grid-rows-6 gap-1 p-[0.3rem]"
     : "grid grid-cols-5 grid-rows-7 gap-2 pt-4 pl-4 pr-4";
 
-  const minutesRemaining = useTimer(TARGET_DATE);
+  // const minutesRemaining = useTimer(TARGET_DATE);
 
   return (
     <div className={`relative h-screen w-screen max-w-[1440px] ${gridClasses}`}>
