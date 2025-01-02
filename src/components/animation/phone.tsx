@@ -1,24 +1,27 @@
-import { useEffect, useRef } from "react";
+import React from "react";
+import { useEffect, useRef, useMemo } from "react";
 import * as THREE from "three";
-import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-// import { OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { AdaptiveDpr, AdaptiveEvents } from "@react-three/drei";
 
 const SpriteSheet = () => {
-  // Load the sprite sheet texture
-  const texture = useLoader(
-    THREE.TextureLoader,
-    "/assets/animation/Sprite-phone-anim.png"
-  );
-  const frameRef = useRef(0); // To track the current frame
+  // Load the sprite sheet texture once and reuse it
+  const texture = useMemo(() => {
+    const loader = new THREE.TextureLoader();
+    const loadedTexture = loader.load(
+      "/assets/animation/Sprite-phone-anim.png"
+    );
+    // Ensure the texture renders crisply for pixel art
+    loadedTexture.minFilter = THREE.NearestFilter;
+    loadedTexture.magFilter = THREE.NearestFilter;
+    return loadedTexture;
+  }, []);
 
+  const frameRef = useRef(0); // To track the current frame
   const frameCount = 13; // Total frames
   const frameWidth = 1 / frameCount; // Width of each frame in UV space
   texture.wrapS = THREE.RepeatWrapping; // Enable horizontal wrapping
   texture.wrapT = THREE.RepeatWrapping;
-
-  // Ensure the texture renders crisply for pixel art
-  texture.minFilter = THREE.NearestFilter;
-  texture.magFilter = THREE.NearestFilter;
 
   useEffect(() => {
     texture.repeat.set(frameWidth, 1); // Display a single frame
@@ -42,7 +45,7 @@ const SpriteSheet = () => {
   );
 };
 
-const Phone = () => {
+const Phone = React.memo(() => {
   return (
     <Canvas
       camera={{ position: [0, 0, 10], fov: 45 }}
@@ -50,11 +53,13 @@ const Phone = () => {
       className="w-full h-full"
     >
       {/* Render the sprite sheet */}
+      <AdaptiveDpr pixelated />
+      <AdaptiveEvents />
       <SpriteSheet />
       {/* Enable orbit controls for navigation ??? */}
       {/* <OrbitControls /> */}
     </Canvas>
   );
-};
+});
 
 export default Phone;
