@@ -125,7 +125,7 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper hidden lg:block ">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <span className="text-pink-500 bg-black p-1 rounded">
+          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
             {minutesRemaining}
           </span>
         </div>
@@ -159,7 +159,7 @@ const GridlayoutDesktop = () => {
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
           <span>nought</span>
-          <span className="m-1 text-sm text-green-500 bg-black p-1 rounded">
+          <span className="m-1 text-sm text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
             1.0.0-beta
           </span>
         </div>
@@ -222,7 +222,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <span className="text-pink-500 bg-black p-1 rounded">
+          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
             {minutesRemaining}
           </span>
         </div>
@@ -241,7 +241,7 @@ const GridLayoutMobile = () => {
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
           <span>nought</span>
-          <span className="m-1 text-xs text-green-500 bg-black p-1 rounded">
+          <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
             1.0.0-beta
           </span>
         </div>
