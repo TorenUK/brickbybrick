@@ -10,7 +10,7 @@ import {
 export const DragCloseModal = ({ title }: { title: string }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="grid h-full w-full ">
+    <div className="grid h-full w-full max-w-[1440px] curson-none">
       <button
         onClick={() => setOpen(true)}
         className="rounded p-2 transition-colors border-none "
@@ -23,22 +23,22 @@ export const DragCloseModal = ({ title }: { title: string }) => {
           <h2 className="text-4xl font-bold text-neutral-200">
             get a tailored solution
           </h2>
-          <h2 className="text-xl font-bold text-neutral-200">
-            give us the details, and we'll get back to you with a bespoke plan
+          <h2 className="text-lg font-bold text-neutral-200">
+            just give us the details, and we'll get back to you with a bespoke
+            plan
           </h2>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
-          <p className="w-full border-y">[FORM...]</p>
+          <div className="w-full h-full flex flex-col space-y-4">
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p>
+            <button className="bg-green-600 text-white border-none">
+              submit
+            </button>
+          </div>
         </div>
       </DragCloseDrawer>
     </div>
