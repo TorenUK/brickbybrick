@@ -39,7 +39,7 @@ const SpriteSheet = () => {
   return (
     <mesh>
       {/* Plane to display the texture */}
-      <planeGeometry args={[11, 11]} />
+      <planeGeometry args={[10, 10]} />
       <meshBasicMaterial transparent map={texture} />
     </mesh>
   );
