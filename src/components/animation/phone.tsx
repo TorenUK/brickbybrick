@@ -18,7 +18,7 @@ const SpriteSheet = () => {
   }, []);
 
   const frameRef = useRef(0); // To track the current frame
-  const frameCount = 9; // Total frames
+  const frameCount = 12; // Total frames
   const frameWidth = 1 / frameCount; // Width of each frame in UV space
   texture.wrapS = THREE.RepeatWrapping; // Enable horizontal wrapping
   texture.wrapT = THREE.RepeatWrapping;
@@ -29,7 +29,7 @@ const SpriteSheet = () => {
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
-    const currentFrame = Math.floor(elapsedTime * 3) % frameCount; // Adjust 10 to control speed
+    const currentFrame = Math.floor(elapsedTime * 12) % frameCount; // Adjust 10 to control speed
     if (frameRef.current !== currentFrame) {
       frameRef.current = currentFrame;
       texture.offset.x = currentFrame * frameWidth; // Shift to the next frame
