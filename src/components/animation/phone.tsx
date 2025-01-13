@@ -19,7 +19,7 @@ const SpriteSheet = () => {
   }, []);
 
   const frameRef = useRef(0); // To track the current frame
-  const frameCount = 12; // Total frames
+  const frameCount = 20; // Total frames
   const frameWidth = 1 / frameCount; // Width of each frame in UV space
 
   texture.wrapS = THREE.RepeatWrapping; // Enable horizontal wrapping
@@ -53,7 +53,7 @@ const Phone = React.memo(() => {
     <Canvas
       dpr={[1, 2]}
       gl={{ antialias: true, precision: "highp" }}
-      camera={{ position: [0, 0, 10], zoom: 1 }}
+      camera={{ position: [0, 0, 10], zoom: 2 }}
       className="w-full h-full"
     >
       {/* Render the sprite sheet */}
