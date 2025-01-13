@@ -160,7 +160,7 @@ const GridlayoutDesktop = () => {
           <Phone />
           {/* <span>nought</span> */}
           <span className="m-1 text-sm text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            nought 1.0.0-beta
+            1.0.0-beta
           </span>
         </div>
       </div>
@@ -242,7 +242,7 @@ const GridLayoutMobile = () => {
           <Phone />
           {/* <span>nought</span> */}
           <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            nought 1.0.0-beta
+            1.0.0-beta
           </span>
         </div>
       </div>

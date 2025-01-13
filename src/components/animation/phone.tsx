@@ -31,7 +31,7 @@ const SpriteSheet = () => {
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
-    const currentFrame = Math.floor(elapsedTime * 12) % frameCount; // Adjust 10 to control speed
+    const currentFrame = Math.floor(elapsedTime * 8) % frameCount; // Adjust 10 to control speed
     texture.offset.x = currentFrame * frameWidth;
     if (frameRef.current !== currentFrame) {
       frameRef.current = currentFrame;
