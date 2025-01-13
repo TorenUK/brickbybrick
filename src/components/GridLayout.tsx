@@ -158,9 +158,9 @@ const GridlayoutDesktop = () => {
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
-          <span>nought</span>
+          {/* <span>nought</span> */}
           <span className="m-1 text-sm text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            1.0.0-beta
+            nought 1.0.0-beta
           </span>
         </div>
       </div>
@@ -237,12 +237,12 @@ const GridLayoutMobile = () => {
           who we are
         </div>
       </div>
-      <div className="card-wrapper col-start-2 col-span-2 row-span-2">
+      <div className="card-wrapper col-start-2 col-span-2 row-span-3">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
-          <span>nought</span>
+          {/* <span>nought</span> */}
           <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            1.0.0-beta
+            nought 1.0.0-beta
           </span>
         </div>
       </div>
@@ -251,12 +251,15 @@ const GridLayoutMobile = () => {
           what we do
         </div>
       </div>
-      <div className="card-wrapper col-start-1 col-span-2">
+      {
+        // todo}
+      }
+      <div className="card-wrapper col-start-1 col-span-2 hidden">
         <div className="card-content flex items-center justify-center">
           projects
         </div>
       </div>
-      <div className="card-wrapper col-start-3 col-span-1">
+      <div className="card-wrapper col-start-1 col-span-1">
         <div className="card-content flex items-center justify-center">
           <DragCloseModal title="get a quote" />
         </div>

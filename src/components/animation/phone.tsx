@@ -14,12 +14,14 @@ const SpriteSheet = () => {
     // Ensure the texture renders crisply for pixel art
     loadedTexture.minFilter = THREE.NearestFilter;
     loadedTexture.magFilter = THREE.NearestFilter;
+    loadedTexture.anisotropy = 0;
     return loadedTexture;
   }, []);
 
   const frameRef = useRef(0); // To track the current frame
   const frameCount = 12; // Total frames
   const frameWidth = 1 / frameCount; // Width of each frame in UV space
+
   texture.wrapS = THREE.RepeatWrapping; // Enable horizontal wrapping
   texture.wrapT = THREE.RepeatWrapping;
 
@@ -30,6 +32,7 @@ const SpriteSheet = () => {
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
     const currentFrame = Math.floor(elapsedTime * 12) % frameCount; // Adjust 10 to control speed
+    texture.offset.x = currentFrame * frameWidth;
     if (frameRef.current !== currentFrame) {
       frameRef.current = currentFrame;
       texture.offset.x = currentFrame * frameWidth; // Shift to the next frame
@@ -39,7 +42,7 @@ const SpriteSheet = () => {
   return (
     <mesh>
       {/* Plane to display the texture */}
-      <planeGeometry args={[10, 10]} />
+      <planeGeometry args={[20, 20]} />
       <meshBasicMaterial transparent map={texture} />
     </mesh>
   );
@@ -48,8 +51,9 @@ const SpriteSheet = () => {
 const Phone = React.memo(() => {
   return (
     <Canvas
-      camera={{ position: [0, 0, 10], fov: 45 }}
-      // style={{ width: "100%", height: "100%" }}
+      dpr={[1, 2]}
+      gl={{ antialias: true, precision: "highp" }}
+      camera={{ position: [0, 0, 10], zoom: 1 }}
       className="w-full h-full"
     >
       {/* Render the sprite sheet */}
