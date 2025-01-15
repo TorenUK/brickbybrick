@@ -12,8 +12,9 @@ const SpriteSheet = () => {
       "/assets/animation/Sprite-phone-anim.png"
     );
     // Ensure the texture renders crisply for pixel art
-    loadedTexture.minFilter = THREE.NearestFilter;
-    loadedTexture.magFilter = THREE.NearestFilter;
+    loadedTexture.generateMipmaps = false;
+    // loadedTexture.minFilter = THREE.NearestFilter;
+    // loadedTexture.magFilter = THREE.NearestFilter;
     loadedTexture.anisotropy = 0;
     return loadedTexture;
   }, []);
@@ -42,7 +43,7 @@ const SpriteSheet = () => {
   return (
     <mesh>
       {/* Plane to display the texture */}
-      <planeGeometry args={[20, 20]} />
+      <planeGeometry args={[28, 28]} />
       <meshBasicMaterial transparent map={texture} />
     </mesh>
   );
@@ -53,8 +54,9 @@ const Phone = React.memo(() => {
     <Canvas
       dpr={[1, 2]}
       gl={{ antialias: true, precision: "highp" }}
-      camera={{ position: [0, 0, 10], zoom: 2 }}
-      className="w-full h-full"
+      camera={{ position: [0, 0, 10], zoom: 1 }}
+      className=" rounded p-1 md:p-0"
+      style={{ width: "100%", height: "100%" }}
     >
       {/* Render the sprite sheet */}
       <AdaptiveDpr pixelated />
