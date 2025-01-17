@@ -1,5 +1,3 @@
-import React from "react";
-
 const images = [
   "/assets/logos/amazon-aws.svg",
   "/assets/logos/contentful.svg",
@@ -15,14 +13,14 @@ const images = [
 
 const HorizontalScroll = () => {
   return (
-    <div className="scroll-container w-full h-full rounded bg-white">
+    <div className="scroll-container w-full h-1/3 rounded bg-white">
       <div className="flex animate-horizontal-scroll">
         {images.map(({ idx, image }) => (
           <img
             key={idx}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -30,7 +28,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -38,7 +36,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -46,7 +44,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4"
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -54,7 +52,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -62,7 +60,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-14 h-14 object-contain p-4 m-1 "
+            className="w-12 h-12 object-contain p-4 "
           />
         ))}
       </div>

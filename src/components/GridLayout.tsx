@@ -199,7 +199,13 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
-        <div className="card-content flex items-center justify-center">
+        <div className="card-content flex flex-col items-center justify-end space-y-1 p-1">
+          <div className="w-full h-1/3 bg-pink-500 rounded flex items-center justify-center">
+            [services]
+          </div>
+          <div className="w-full h-1/3 bg-green-500 rounded flex items-center justify-center">
+            [integrations]
+          </div>
           <HorizontalScroll />
         </div>
       </div>
@@ -232,7 +238,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <HorizontalScroll />
+          [...]
         </div>
       </div>
       <div className="card-wrapper col-span-1">
@@ -255,8 +261,14 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1 ">
-        <div className="card-content flex items-center justify-center">
-          [...]
+        <div className="card-content flex flex-col items-center justify-end space-y-1 p-1">
+          <div className="w-full h-1/3 bg-pink-500 rounded flex items-center justify-center">
+            [services]
+          </div>
+          <div className="w-full h-1/3 bg-green-500 rounded flex items-center justify-center">
+            [integrations]
+          </div>
+          <HorizontalScroll />
         </div>
       </div>
       {
