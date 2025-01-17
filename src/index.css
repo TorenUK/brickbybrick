@@ -6,8 +6,16 @@
 
 @layer utilities {
   .card-wrapper {
-    @apply relative border-[1px] border-[#ffffff2c] rounded-md
+    @apply relative border-[1px] border-[#ffffff2c] border-dotted rounded-md
     overflow-hidden;
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
   }
 
   .card-wrapper::before {

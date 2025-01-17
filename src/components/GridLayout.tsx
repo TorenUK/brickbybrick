@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Phone from "./animation/phone";
+import HorizontalScroll from "./HorizontalScroll";
 import { useTimer } from "../hooks/useTimer";
 import { DragCloseModal } from "./Modal";
 
@@ -9,6 +10,11 @@ import { DragCloseModal } from "./Modal";
 // create 'get quote' form using react hook form
 // Required Fields:
 // first name, last name, email, phone, [project outline]
+
+// brick
+// horizontal scrolling bricks with services / technologies
+// web, mobile, desktop
+// shopify, kirby, strapi, wordpress, contentful, AWS, Firebase
 
 type GridCard = {
   name: string;
@@ -20,7 +26,7 @@ type GridCard = {
   rowSpan?: number;
   element?: React.JSX.Element;
 };
-// todo: populate with array of tile objects
+// todo: populate with array of tile objectsst
 // object shape:
 // abstract styles to main style sheet
 // title, styles (col-span, row-span, col-start, row-start, display), content (Form? Animation?, text?),
@@ -193,7 +199,9 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
-        <div className="card-content flex items-center justify-center">cms</div>
+        <div className="card-content flex items-center justify-center">
+          <HorizontalScroll />
+        </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 md:row-start-7 md:col-span-5 ">
         <div className="card-content flex flex-col justify-end">
@@ -217,14 +225,14 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center">
-          [...]
+          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
+            {minutesRemaining}
+          </span>
         </div>
       </div>
       <div className="card-wrapper col-span-2">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            {minutesRemaining}
-          </span>
+          <HorizontalScroll />
         </div>
       </div>
       <div className="card-wrapper col-span-1">
