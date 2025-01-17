@@ -20,7 +20,7 @@ const HorizontalScroll = () => {
             key={idx}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4 "
+            className="w-8 h-9 md:h-14 md:w-14 object-contain p-2 md:p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -28,7 +28,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4 "
+            className="w-8 h-9 md:h-14 md:w-14 object-contain p-2 md:p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -36,7 +36,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4 "
+            className="w-8 h-9 md:h-14 md:w-14 object-contain p-2 md:p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -44,7 +44,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4"
+            className="w-8 h-9 md:h-14 md:w-14 object-contain p-2 md:p-4"
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -52,7 +52,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4 "
+            className="w-8 h-9 md:h-14 md:w-14 object-contain p-2 md:p-4 "
           />
         ))}
         {images.map(({ idx, image }) => (
@@ -60,7 +60,7 @@ const HorizontalScroll = () => {
             key={`clone-${idx}`}
             src={image}
             alt="logo"
-            className="w-12 h-12 object-contain p-4 "
+            className="w-10 h-10 md:h-14 md:w-14 object-contain p-2 md:p-4 "
           />
         ))}
       </div>
