@@ -24,8 +24,7 @@ export const DragCloseModal = ({ title }: { title: string }) => {
             get a tailored solution
           </h2>
           <h2 className="text-lg font-bold text-neutral-200">
-            just give us the details, and we'll get back to you with a bespoke
-            plan
+            give us the details, and we'll get back to you with a bespoke plan
           </h2>
           <div className="w-full h-full flex flex-col space-y-4">
             <p className="w-full border-y p-1">[FORM...]</p>
@@ -93,7 +92,7 @@ const DragCloseDrawer = ({
             transition={{
               ease: "easeInOut",
             }}
-            className="absolute bottom-0 h-[75vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
+            className="absolute bottom-0 h-[65vh] md:h-[50vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
             style={{ y }}
             drag="y"
             dragControls={controls}

@@ -158,9 +158,9 @@ const GridlayoutDesktop = () => {
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
-          <span>nought</span>
+          {/* <span>nought</span> */}
           <span className="m-1 text-sm text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            1.0.0-beta
+            1.0.0-alpha
           </span>
         </div>
       </div>
@@ -217,7 +217,7 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center">
-          social
+          [...]
         </div>
       </div>
       <div className="card-wrapper col-span-2">
@@ -229,26 +229,26 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-span-1">
         <div className="card-content flex items-center justify-center flex-wrap text-center">
-          creative engineering
+          [...]
         </div>
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          who we are
+          [...]
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-3">
         <div className="card-content flex flex-col items-center justify-center">
           <Phone />
-          <span>nought</span>
+          {/* <span>nought</span> */}
           <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            1.0.0-beta
+            1.0.0-alpha
           </span>
         </div>
       </div>
-      <div className="card-wrapper col-start-1 col-span-1">
+      <div className="card-wrapper col-start-1 col-span-1 ">
         <div className="card-content flex items-center justify-center">
-          what we do
+          [...]
         </div>
       </div>
       {
