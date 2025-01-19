@@ -241,7 +241,7 @@ const GridlayoutDesktop = () => {
 const GridLayoutMobile = () => {
   const minutesRemaining = useTimer(TARGET_DATE);
   return (
-    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows gap-1 p-[0.3rem]">
+    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-[0.3rem]">
       <div className="col-span-2 flex items-center justify-center w-full">
         <Hero />
       </div>
