@@ -137,8 +137,16 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-4">
-        <div className="card-content flex items-center justify-center text-center flex-wrap p-2">
-          creative engineering
+        <div className="card-content flex text-center p-1 space-x-1">
+          <div className="h-full flex items-center justify-center w-2/3 rounded bg-blue-500">
+            [1]
+          </div>
+          <div className="h-full flex items-center justify-center w-1/3 rounded bg-orange-500">
+            [2]
+          </div>
+          <div className="h-full flex items-center justify-center w-1/3 rounded bg-orange-500">
+            [3]
+          </div>
         </div>
       </div>
       <div className="card-wrapper">
@@ -147,8 +155,16 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-span-3 md:col-span-2 row-start-2">
-        <div className="card-content flex items-center justify-center">
-          who we are
+        <div className="card-content flex flex-col items-center justify-center text-center p-1 space-y-1">
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [web]
+          </div>
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [mobile]
+          </div>
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [desktop]
+          </div>
         </div>
       </div>
       <div className="card-wrapper md:flex col-span-2 col-start-4 row-start-2">
@@ -225,7 +241,7 @@ const GridlayoutDesktop = () => {
 const GridLayoutMobile = () => {
   const minutesRemaining = useTimer(TARGET_DATE);
   return (
-    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows-6 gap-1 p-[0.3rem]">
+    <div className="relative h-screen w-screen grid grid-cols-3 grid-rows gap-1 p-[0.3rem]">
       <div className="col-span-2 flex items-center justify-center w-full">
         <Hero />
       </div>
@@ -237,13 +253,29 @@ const GridLayoutMobile = () => {
         </div>
       </div>
       <div className="card-wrapper col-span-2">
-        <div className="card-content flex items-center justify-center flex-wrap text-center">
-          [...]
+        <div className="card-content flex flex-col items-center justify-center text-center p-1 space-y-1">
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [web]
+          </div>
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [mobile]
+          </div>
+          <div className="h-1/3 w-full flex items-center justify-center rounded bg-[#1a1a1a]">
+            [desktop]
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-span-1">
-        <div className="card-content flex items-center justify-center flex-wrap text-center">
-          [...]
+        <div className="card-content flex text-center p-1 space-x-1">
+          <div className="h-full flex items-center justify-center w-2/3 rounded bg-blue-500">
+            [1]
+          </div>
+          <div className="h-full flex items-center justify-center w-1/3 rounded bg-orange-500">
+            [2]
+          </div>
+          <div className="h-full flex items-center justify-center w-1/3 rounded bg-orange-500">
+            [3]
+          </div>
         </div>
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
