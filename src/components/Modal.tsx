@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useMeasure from "react-use-measure";
 import {
   useDragControls,
@@ -9,6 +9,19 @@ import {
 
 export const DragCloseModal = ({ title }: { title: string }) => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div className="grid h-full w-full max-w-[1440px] curson-none">
       <button
@@ -31,9 +44,9 @@ export const DragCloseModal = ({ title }: { title: string }) => {
             <p className="w-full border-y p-1">[FORM...]</p>
             <p className="w-full border-y p-1">[FORM...]</p>
             <p className="w-full border-y p-1">[FORM...]</p>
+            {/* <p className="w-full border-y p-1">[FORM...]</p>
             <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
+            <p className="w-full border-y p-1">[FORM...]</p> */}
             <button className="bg-green-600 text-white border-none">
               submit
             </button>
