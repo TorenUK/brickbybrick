@@ -3,7 +3,7 @@ import { GridLayoutMobile, GridlayoutDesktop } from "./components/GridLayout";
 
 function App() {
   const renderBackgroundGrid = () => {
-    const gridCount = 10;
+    const gridCount = 7;
     return Array.from({ length: gridCount }, (_, index) => (
       <div
         key={index}
