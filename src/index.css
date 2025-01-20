@@ -6,7 +6,7 @@
 
 @layer utilities {
   .card-wrapper {
-    @apply relative border-[1px] border-[#ffffff17]  rounded-md
+    @apply relative border-[1px] border-[#ffffff2c]  rounded-md
     overflow-hidden;
   }
 
@@ -21,7 +21,7 @@
   .card-wrapper::before {
     background: conic-gradient(
       rgb(201, 201, 201) 0deg,
-      rgba(255, 255, 255, 0.479) 0deg,
+      rgba(255, 255, 255, 0.75) 0deg,
       transparent 100deg
     );
 
