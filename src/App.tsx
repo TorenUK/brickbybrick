@@ -3,19 +3,19 @@ import { GridLayoutMobile, GridlayoutDesktop } from "./components/GridLayout";
 
 function App() {
   const renderBackgroundGrid = () => {
-    const gridCount = 7;
+    const gridCount = 10;
     return Array.from({ length: gridCount }, (_, index) => (
       <div
         key={index}
-        className="border-x-[1px] border-dotted h-full md:w-1/6 w-1/4 opacity-5"
+        className="border-x-[1px] border-dotted  h-full md:w-1/6 w-1/4 opacity-5"
       ></div>
     ));
   };
 
   return (
-    <div className="app">
+    <div className="app flex items-center justify-center">
       {/* Background grid */}
-      <div className="absolute w-screen h-screen -z-10 flex flex-row">
+      <div className="absolute w-screen max-w-[1440px] h-screen -z-10 flex flex-row">
         {renderBackgroundGrid()}
       </div>
 
