@@ -25,7 +25,7 @@
       transparent 100deg
     );
 
-    @apply absolute h-[150%] w-[150%] left-[-25%] top-[-25%]  content-[''] animate-border-spin;
+    @apply absolute h-[250%] w-[250%] left-[-75%] top-[-75%]  content-[''] animate-border-spin;
   }
 
   .card-content {
