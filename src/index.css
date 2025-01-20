@@ -6,7 +6,7 @@
 
 @layer utilities {
   .card-wrapper {
-    @apply relative border-[1px] border-[#ffffff2c]  rounded-md
+    @apply relative border-[1px] border-[#ffffff17]  rounded-md
     overflow-hidden;
   }
 
