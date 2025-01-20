@@ -226,9 +226,23 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 md:row-start-7 md:col-span-5 ">
-        <div className="card-content flex flex-col justify-end">
-          <div className="w-full h-full flex items-center justify-center">
-            privacy policy
+        <div className="card-content flex flex-col justify-end  ">
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] rounded">
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[1]</span>
+              <span>[2]</span>
+              <span>[3]</span>
+            </div>
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[4]</span>
+              <span>[5]</span>
+              <span>[6]</span>
+            </div>
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[7]</span>
+              <span>[8]</span>
+              <span>privacy policy</span>
+            </div>
           </div>
           <Footer />
         </div>
@@ -318,8 +332,22 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-start-1 col-span-3">
         <div className="card-content flex flex-col justify-end">
-          <div className="w-full h-full flex items-center justify-center">
-            privacy policy
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] rounded">
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[1]</span>
+              <span>[2]</span>
+              <span>[3]</span>
+            </div>
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[4]</span>
+              <span>[5]</span>
+              <span>[6]</span>
+            </div>
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
+              <span>[7]</span>
+              <span>[8]</span>
+              <span>privacy policy</span>
+            </div>
           </div>
           <Footer />
         </div>
