@@ -5,6 +5,8 @@ import Phone from "./animation/phone";
 import HorizontalScroll from "./HorizontalScroll";
 import { useTimer } from "../hooks/useTimer";
 import { DragCloseModal } from "./Modal";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 //todo
 // create 'get quote' form using react hook form
@@ -229,18 +231,24 @@ const GridlayoutDesktop = () => {
         <div className="card-content flex flex-col justify-end  ">
           <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] rounded">
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[1]</span>
-              <span>[2]</span>
-              <span>[3]</span>
+              <span><a href='https://github.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faGithub} style={{ color: 'white' }} size='1x'/>
+           </a></span>
+              <span><a href='https://Linkedin.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faLinkedin} style={{ color: 'white' }} size='1x'/>
+           </a></span>
+              <span> <a href='https://tiktok.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faTiktok} style={{ color: 'white' }} size='1x'/>
+           </a></span>
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[4]</span>
-              <span>[5]</span>
-              <span>[6]</span>
+              <span>About Us</span>
+              <span>Our vision</span>
+              <span>FAQ</span>
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[7]</span>
-              <span>[8]</span>
+              <span><a href="mailto:toren@toren.uk">Contact Us</a></span>
+              <span>Terms & Conditions</span>
               <span>privacy policy</span>
             </div>
           </div>
@@ -334,18 +342,24 @@ const GridLayoutMobile = () => {
         <div className="card-content flex flex-col justify-end">
           <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] rounded">
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[1]</span>
-              <span>[2]</span>
-              <span>[3]</span>
+            <span><a href='https://github.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faGithub} style={{ color: 'white' }} size='1x'/>
+           </a></span>
+              <span><a href='https://Linkedin.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faLinkedin} style={{ color: 'white' }} size='1x'/>
+           </a></span>
+              <span> <a href='https://tiktok.com/yourusernamehere'>
+           <FontAwesomeIcon icon={faTiktok} style={{ color: 'white' }} size='1x'/>
+           </a></span>
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[4]</span>
-              <span>[5]</span>
-              <span>[6]</span>
+              <span>About Us</span>
+              <span>Our vision</span>
+              <span>FAQ</span>
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center space-y-1 ">
-              <span>[7]</span>
-              <span>[8]</span>
+              <span><a href="mailto:toren@toren.uk">Contact Us</a></span>
+              <span>Terms & Conditions</span>
               <span>privacy policy</span>
             </div>
           </div>
