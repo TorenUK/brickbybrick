@@ -6,6 +6,8 @@ import HorizontalScroll from "./HorizontalScroll";
 import { useTimer } from "../hooks/useTimer";
 import { DragCloseModal } from "./Modal";
 
+const video = "/assets/video/coast.mp4";
+
 //todo
 // create 'get quote' form using react hook form
 // Required Fields:
@@ -294,7 +296,21 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          [...]
+          <div className="w-full h-full rounded">
+            <video
+              className="absolute top-0 left-0 w-full h-full rounded object-cover"
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="relative z-10 flex items-center justify-center h-full w-full">
+              <p className="text-white font-bold">[...]</p>
+            </div>
+            {/* Overlay  */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-5"></div>
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-3">
