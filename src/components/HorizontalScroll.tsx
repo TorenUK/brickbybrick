@@ -6,6 +6,8 @@ const images = [
   "/assets/logos/kirby.svg",
   "/assets/logos/strapi.svg",
   "/assets/logos/wordpress.svg",
+  "/assets/logos/apple.svg",
+  "/assets/logos/android-os.svg",
 ].map((image, idx) => ({
   idx,
   image,
