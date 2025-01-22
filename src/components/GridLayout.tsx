@@ -296,9 +296,9 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper row-start-3 col-span-1">
         <div className="card-content flex items-center justify-center">
-          <div className="w-full h-full rounded">
+          <div className="w-full h-full rounded bg-[#1a1a1a]">
             <video
-              className="absolute top-0 left-0 w-full h-full rounded object-cover"
+              className="absolute top-0 left-0 w-full h-full rounded object-cover p-[0.15rem]"
               src={video}
               autoPlay
               loop
