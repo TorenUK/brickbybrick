@@ -4,7 +4,7 @@ import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { AdaptiveDpr, AdaptiveEvents } from "@react-three/drei";
 
-const SpriteSheet = () => {
+const SpriteSheet = ({ size }: { size: number }) => {
   // Load the sprite sheet texture once and reuse it
   const texture = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -43,13 +43,13 @@ const SpriteSheet = () => {
   return (
     <mesh>
       {/* Plane to display the texture */}
-      <planeGeometry args={[28, 28]} />
+      <planeGeometry args={[size, size]} />
       <meshBasicMaterial transparent map={texture} />
     </mesh>
   );
 };
 
-const Phone = React.memo(() => {
+const Phone = React.memo(({ size }: { size: number }) => {
   return (
     <Canvas
       dpr={[1, 2]}
@@ -61,7 +61,7 @@ const Phone = React.memo(() => {
       {/* Render the sprite sheet */}
       <AdaptiveDpr pixelated />
       <AdaptiveEvents />
-      <SpriteSheet />
+      <SpriteSheet size={size} />
       {/* Enable orbit controls for navigation ??? */}
       {/* <OrbitControls /> */}
     </Canvas>
