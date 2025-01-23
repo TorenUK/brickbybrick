@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import EnquireForm from "./forms/Enquire";
 import useMeasure from "react-use-measure";
 import {
   useDragControls,
@@ -23,7 +24,7 @@ export const DragCloseModal = ({ title }: { title: string }) => {
   }, [open]);
 
   return (
-    <div className="grid h-full w-full max-w-[1440px] curson-none">
+    <div className="grid h-full w-full max-w-[1440px]">
       <button
         onClick={() => setOpen(true)}
         className="rounded p-2 transition-colors border-none "
@@ -32,25 +33,14 @@ export const DragCloseModal = ({ title }: { title: string }) => {
       </button>
 
       <DragCloseDrawer open={open} setOpen={setOpen}>
-        <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
+        <div className="mx-auto h-2/3 max-w-2xl space-y-2 text-neutral-400">
           <h2 className="text-4xl font-bold text-neutral-200">
             get a tailored solution
           </h2>
-          <h2 className="text-lg font-bold text-neutral-200">
+          <h3 className="text-lg font-bold text-neutral-200">
             give us the details, and we'll get back to you with a bespoke plan
-          </h2>
-          <div className="w-full h-full flex flex-col space-y-4">
-            <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
-            {/* <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p>
-            <p className="w-full border-y p-1">[FORM...]</p> */}
-            <button className="bg-green-600 text-white border-none">
-              submit
-            </button>
-          </div>
+          </h3>
+          <EnquireForm />
         </div>
       </DragCloseDrawer>
     </div>
@@ -94,7 +84,7 @@ const DragCloseDrawer = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={handleClose}
-          className="fixed inset-0 z-50 bg-neutral-950/70"
+          className="fixed inset-0 z-50 bg-neutral-950/70 cursor-default max-w-[1440px] mx-auto "
         >
           <motion.div
             id="drawer"
@@ -105,7 +95,7 @@ const DragCloseDrawer = ({
             transition={{
               ease: "easeInOut",
             }}
-            className="absolute bottom-0 h-[65vh] md:h-[50vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
+            className="absolute bottom-0 h-[65vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
             style={{ y }}
             drag="y"
             dragControls={controls}
