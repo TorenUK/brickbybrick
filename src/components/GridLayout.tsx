@@ -132,9 +132,9 @@ const GridlayoutDesktop = () => {
         <Hero />
       </div>
       <div className="card-wrapper hidden lg:block ">
-        <div className="card-content flex items-center justify-center ">
-          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
-            <span className="text-pink-500  px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
+        <div className="card-content flex items-center justify-center p-1">
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] p-1 rounded">
+            <span className="text-pink-500 px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
               {minutesRemaining}
             </span>
           </div>
@@ -228,8 +228,10 @@ const GridlayoutDesktop = () => {
         </div>
       </div>
       <div className="card-wrapper col-start-3 row-start-6 col-span-1 ">
-        <div className="card-content flex items-center justify-center cursor-pointer">
-          <DragCloseModal title="get a quote" />
+        <div className="card-content flex items-center justify-center">
+          <div className="w-full h-full rounded bg-[#242424] p-1">
+            <DragCloseModal title="get a quote" />
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-4 row-start-6 col-span-2 ">
@@ -278,9 +280,9 @@ const GridLayoutMobile = () => {
         <Hero />
       </div>
       <div className="card-wrapper col-span-1">
-        <div className="card-content flex items-center justify-center ">
-          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
-            <span className="text-pink-500  px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
+        <div className="card-content flex items-center justify-center p-1">
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] p-1 rounded">
+            <span className="text-pink-500 px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
               {minutesRemaining}
             </span>
           </div>
@@ -362,7 +364,9 @@ const GridLayoutMobile = () => {
       </div>
       <div className="card-wrapper col-start-1 col-span-1">
         <div className="card-content flex items-center justify-center">
-          <DragCloseModal title="get a quote" />
+          <div className="w-full h-full rounded bg-[#242424] p-1">
+            <DragCloseModal title="get a quote" />
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3">
