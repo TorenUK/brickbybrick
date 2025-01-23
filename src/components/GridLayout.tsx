@@ -132,10 +132,12 @@ const GridlayoutDesktop = () => {
         <Hero />
       </div>
       <div className="card-wrapper hidden lg:block ">
-        <div className="card-content flex items-center justify-center flex-wrap text-center">
-          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            {minutesRemaining}
-          </span>
+        <div className="card-content flex items-center justify-center ">
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+            <span className="text-pink-500  px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
+              {minutesRemaining}
+            </span>
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-4">
@@ -176,12 +178,26 @@ const GridlayoutDesktop = () => {
       </div>
       <div className="card-wrapper col-start-3 row-start-2">
         <div className="card-content flex items-center justify-center">
-          projects
+          <div className="w-full h-full rounded bg-[#1a1a1a]">
+            <video
+              className="absolute top-0 left-0 w-full h-full rounded object-cover p-[0.15rem]"
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="relative z-10 flex items-center justify-center h-full w-full">
+              <p className="text-white font-bold">[...]</p>
+            </div>
+            {/* Overlay  */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-5 rounded"></div>
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-3 row-span-2 md:col-span-3 md:row-span-3 md:col-start-2 row-start-3">
         <div className="card-content flex flex-col items-center justify-center">
-          <Phone />
+          <Phone size={28} />
           {/* <span>nought</span> */}
           <span className="m-1 text-sm text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
             1.0.0-alpha
@@ -262,10 +278,12 @@ const GridLayoutMobile = () => {
         <Hero />
       </div>
       <div className="card-wrapper col-span-1">
-        <div className="card-content flex items-center justify-center">
-          <span className="text-pink-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            {minutesRemaining}
-          </span>
+        <div className="card-content flex items-center justify-center ">
+          <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+            <span className="text-pink-500  px-1 rounded border border-opacity-50 border-[#e5e7eb] bg-black">
+              {minutesRemaining}
+            </span>
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-span-2">
@@ -309,17 +327,18 @@ const GridLayoutMobile = () => {
               <p className="text-white font-bold">[...]</p>
             </div>
             {/* Overlay  */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-5"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-5 rounded"></div>
           </div>
         </div>
       </div>
       <div className="card-wrapper col-start-2 col-span-2 row-span-3">
-        <div className="card-content flex flex-col items-center justify-center">
-          <Phone />
-          {/* <span>nought</span> */}
-          <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
-            1.0.0-alpha
-          </span>
+        <div className="card-content flex flex-col items-center justify-center p-1 space-y-1">
+          <div className="w-full h-full  flex flex-col items-center justify-center rounded ">
+            <Phone size={24} />
+            <span className="m-1 text-xs text-green-500 bg-[#1a1a1a] px-1 rounded border border-opacity-50 border-[#e5e7eb]">
+              1.0.0-alpha
+            </span>
+          </div>
         </div>
       </div>
       <div className="card-wrapper col-start-1 col-span-1 ">
