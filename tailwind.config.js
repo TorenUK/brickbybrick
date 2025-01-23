@@ -19,7 +19,7 @@ export default {
         },
       },
       animation: {
-        "border-spin": "border-spin 9s linear infinite",
+        "border-spin": "border-spin 11s linear infinite",
         "horizontal-scroll": "horizontal-scroll 105s linear infinite",
       },
       fontFamily: {
