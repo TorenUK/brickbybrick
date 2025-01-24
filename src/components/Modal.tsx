@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import EnquireForm from "./forms/Enquire";
 import useMeasure from "react-use-measure";
+import FormWizard from "./forms/FormWizard";
 import {
   useDragControls,
   useMotionValue,
   useAnimate,
   motion,
 } from "motion/react";
+import config from "../config";
 
 export const DragCloseModal = ({ title }: { title: string }) => {
   const [open, setOpen] = useState(false);
@@ -40,7 +41,11 @@ export const DragCloseModal = ({ title }: { title: string }) => {
           <h3 className="text-lg font-bold text-neutral-200">
             give us the details, and we'll get back to you with a bespoke plan
           </h3>
-          <EnquireForm />
+          <FormWizard
+            steps={config.forms.enquire.steps}
+            defaultValues={config.forms.enquire.defaultValues}
+            onSubmit={(values) => console.log(values)} // todo
+          />
         </div>
       </DragCloseDrawer>
     </div>
