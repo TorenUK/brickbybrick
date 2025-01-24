@@ -6,5 +6,7 @@ export interface Step {
 export interface Field {
   name: string;
   label: string;
+  type?: string;
+  validation?: Record<string, any>;
   errors: Record<string, string>;
 }

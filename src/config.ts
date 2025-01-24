@@ -7,14 +7,43 @@ const config: Config = {
         {
           id: "STEP_1",
           fields: [
-            { name: "FIRSTNAME", label: "first name", errors: {} },
-            { name: "LASTNAME", label: "last name", errors: {} },
+            {
+              name: "NAME",
+              label: "name",
+              errors: {},
+              validation: { required: true },
+            },
+            {
+              name: "EMAIL",
+              label: "email",
+              errors: {},
+              validation: { required: true },
+            },
           ],
         },
         {
           id: "STEP_2",
           fields: [
-            { name: "COUNTRY", label: "country", errors: {} },
+            {
+              name: "COUNTRY",
+              label: "country",
+              errors: {},
+              type: "select",
+              validation: { required: true },
+            },
+            // { name: "DETAILS", label: "details", errors: {} },
+          ],
+        },
+        {
+          id: "STEP_3",
+          fields: [
+            {
+              name: "DETAILS",
+              label: "details",
+              errors: {},
+              type: "textarea",
+              validation: { required: true },
+            },
             // { name: "DETAILS", label: "details", errors: {} },
           ],
         },

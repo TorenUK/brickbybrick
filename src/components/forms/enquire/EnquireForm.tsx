@@ -55,7 +55,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({
                   : "focus:ring-blue-500"
               }`}
             />
-            <p className="text-xs text-red-500">[test errors]</p>
+            {/* <p className="text-xs text-red-500">[test errors]</p> */}
           </div>
         ))}
         <div className="flex justify-between items-center">
