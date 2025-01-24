@@ -49,7 +49,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({
               id={name}
               placeholder={label}
               {...register(name, validation)}
-              className={`w-full md:w-1/2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 text-xs ${
+              className={`w-full md:w-1/2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 text-sm ${
                 errors[name]
                   ? "border-red-500 focus:ring-red-500"
                   : "focus:ring-blue-500"
@@ -63,17 +63,19 @@ const EnquireForm: React.FC<EnquireFormProps> = ({
             <button
               type="button"
               onClick={handleSubmit(onBack)}
-              className="px-4 py-2 hover:bg-gray-300"
+              className="px-4 py-2 text-white hover:bg-gray-300"
             >
               back
             </button>
           )}
-          <button
-            type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-          >
-            next
-          </button>
+          <div className="w-full flex justify-end">
+            <button
+              type="submit"
+              className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+            >
+              next
+            </button>
+          </div>
         </div>
       </form>
     </FormProvider>
