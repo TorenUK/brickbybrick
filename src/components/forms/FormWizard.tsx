@@ -57,7 +57,7 @@ const FormWizard: React.FC<FormWizardProps> = ({
   };
 
   return (
-    <div>
+    <div className="w-full h-full flex flex-col">
       <div className="w-full flex justify-start">
         <span className="my-1 text-sm  p-1 rounded text-white">
           {currentStep}/{noOfSteps}
@@ -71,6 +71,7 @@ const FormWizard: React.FC<FormWizardProps> = ({
           showBackButton={activeStepIndex > 0}
           onSubmit={handleNextStep}
           onBack={handleBackStep}
+          isLastStep={isLastStep}
         />
       )}
     </div>

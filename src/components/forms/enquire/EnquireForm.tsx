@@ -11,6 +11,7 @@ export interface EnquireFormProps {
   showBackButton: boolean;
   onSubmit: (values: Record<string, any>) => void;
   onBack: (values: Record<string, any>) => void;
+  isLastStep: boolean;
 }
 
 const EnquireForm: React.FC<EnquireFormProps> = ({
@@ -19,6 +20,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({
   showBackButton,
   onSubmit,
   onBack,
+  isLastStep,
 }) => {
   const methods = useForm({
     defaultValues,
@@ -73,7 +75,7 @@ const EnquireForm: React.FC<EnquireFormProps> = ({
               type="submit"
               className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
             >
-              next
+              {`${isLastStep ? "submit" : "next"}`}
             </button>
           </div>
         </div>
