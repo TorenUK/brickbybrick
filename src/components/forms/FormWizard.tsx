@@ -35,8 +35,9 @@ const FormWizard: React.FC<FormWizardProps> = ({
   );
 
   const NextStep = () => setActiveStepIndex((index) => index + 1);
-
   const PrevStep = () => setActiveStepIndex((index) => index - 1);
+  const currentStep = activeStepIndex + 1;
+  const noOfSteps = steps.length;
 
   const handleNextStep = (stepValues: Record<string, any>) => {
     const updatedValues = { ...values, ...stepValues };
@@ -57,6 +58,11 @@ const FormWizard: React.FC<FormWizardProps> = ({
 
   return (
     <div>
+      <div className="w-full flex justify-start">
+        <span className="my-1 text-sm  p-1 rounded text-white">
+          {currentStep}/{noOfSteps}
+        </span>
+      </div>
       {activeStep && (
         <EnquireForm
           key={activeStep.id}
